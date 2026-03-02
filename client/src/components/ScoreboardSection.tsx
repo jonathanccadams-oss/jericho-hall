@@ -16,6 +16,7 @@ interface HallScore {
   }[];
   isJericho?: boolean;
   reigningChampion?: boolean;
+  logo?: string;
 }
 
 const hallData: HallScore[] = [
@@ -32,6 +33,7 @@ const hallData: HallScore[] = [
       { label: "Academics", score: 63, max: 100 },
       { label: "Arts", score: 65, max: 100 },
     ],
+    logo: "https://nsa.edu/wp-content/uploads/2024/01/malta-logo.png",
   },
   {
     name: "Jericho",
@@ -48,6 +50,7 @@ const hallData: HallScore[] = [
       { label: "Academics", score: 58, max: 100 },
       { label: "Arts", score: 65, max: 100 },
     ],
+    logo: "https://nsa.edu/wp-content/uploads/2024/01/jericho-logo.png",
   },
   {
     name: "Ashdown",
@@ -62,6 +65,7 @@ const hallData: HallScore[] = [
       { label: "Academics", score: 29, max: 100 },
       { label: "Arts", score: 70, max: 100 },
     ],
+    logo: "https://nsa.edu/wp-content/uploads/2024/01/ashdown-logo.png",
   },
 ];
 
@@ -155,13 +159,23 @@ export default function ScoreboardSection() {
               )}
 
               <div
-                className={`p-6 h-full ${hall.isJericho ? "shadow-[0_0_30px_oklch(0.72_0.15_85/0.2)]" : ""}`}
+                className={`relative p-6 h-full overflow-hidden ${hall.isJericho ? "shadow-[0_0_30px_oklch(0.72_0.15_85/0.2)]" : ""}`}
                 style={{
                   background: hall.bgColor,
                   border: `1px solid ${hall.borderColor}`,
                 }}
               >
-                {/* Hall name and rank */}
+                {/* Faint logo background */}
+                {hall.logo && (
+                  <img
+                    src={hall.logo}
+                    alt={`${hall.name} logo`}
+                    className="absolute inset-0 w-full h-full object-contain opacity-5 pointer-events-none"
+                  />
+                )}
+                {/* Content wrapper */}
+                <div className="relative z-10">
+                  {/* Hall name and rank */}
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <p
@@ -247,6 +261,7 @@ export default function ScoreboardSection() {
                       </div>
                     </div>
                   ))}
+                </div>
                 </div>
               </div>
             </div>

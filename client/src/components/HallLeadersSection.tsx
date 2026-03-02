@@ -98,9 +98,9 @@ export default function HallLeadersSection() {
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover scale-125"
                     style={{
-                      objectPosition: i === 0 ? "left center" : i === 1 ? "center center" : "center center",
+                      objectPosition: i === 0 ? "30% center" : i === 1 ? "50% 40%" : "50% 35%",
                     }}
                   />
                 </div>

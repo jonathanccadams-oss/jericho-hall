@@ -44,14 +44,14 @@ export default function HeroSection() {
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        {/* Crest with glow */}
+        {/* Eagle with glow */}
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-[oklch(0.72_0.15_85/0.2)] blur-2xl scale-[2]" />
+            <div className="absolute inset-0 bg-[oklch(0.72_0.15_85/0.15)] blur-3xl scale-[1.5]" />
             <img
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/puTdZiuxPRQIFUMR.jpg"
-              alt="Jericho Hall Crest"
-              className="relative w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-2 border-[oklch(0.72_0.15_85/0.7)] shadow-[0_0_50px_oklch(0.72_0.15_85/0.4)]"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/gGuAwFrhQMrnGWpz.png"
+              alt="Jericho Hall Eagle"
+              className="relative w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_30px_oklch(0.72_0.15_85/0.4)]"
             />
           </div>
         </div>
