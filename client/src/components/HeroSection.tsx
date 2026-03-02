@@ -44,15 +44,15 @@ export default function HeroSection() {
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        {/* Eagle with glow */}
-        <div className="flex justify-center mb-6">
+        {/* Eagle with glow - moved down */}
+        <div className="flex justify-center mb-12 mt-4">
           <div className="relative">
             <div className="absolute inset-0 bg-[oklch(0.72_0.15_85/0.15)] blur-3xl scale-[1.5]" />
             <img
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/gGuAwFrhQMrnGWpz.png"
               alt="Jericho Hall Eagle"
               className="relative w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-[0_0_20px_oklch(0.72_0.15_85/0.3)]"
-              style={{ filter: "brightness(1.2) saturate(1.1)", opacity: 0.95 }}
+              style={{ filter: "hue-rotate(0deg) saturate(1.3) brightness(1.4) drop-shadow(0 0 10px oklch(0.72 0.15 85 / 0.5))", color: "oklch(0.72 0.15 85)" }}
             />
           </div>
         </div>
