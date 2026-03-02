@@ -15,9 +15,24 @@ interface HallScore {
     max: number;
   }[];
   isJericho?: boolean;
+  reigningChampion?: boolean;
 }
 
 const hallData: HallScore[] = [
+  {
+    name: "Malta",
+    shortName: "MLT",
+    color: "oklch(0.70 0.02 250)",
+    bgColor: "oklch(0.15 0.03 250)",
+    borderColor: "oklch(0.70 0.02 250 / 0.4)",
+    score: 178,
+    rank: 1,
+    categories: [
+      { label: "Athletics", score: 50, max: 100 },
+      { label: "Academics", score: 63, max: 100 },
+      { label: "Arts", score: 65, max: 100 },
+    ],
+  },
   {
     name: "Jericho",
     shortName: "JER",
@@ -27,6 +42,7 @@ const hallData: HallScore[] = [
     score: 173,
     rank: 2,
     isJericho: true,
+    reigningChampion: true,
     categories: [
       { label: "Athletics", score: 50, max: 100 },
       { label: "Academics", score: 58, max: 100 },
@@ -45,20 +61,6 @@ const hallData: HallScore[] = [
       { label: "Athletics", score: 50, max: 100 },
       { label: "Academics", score: 29, max: 100 },
       { label: "Arts", score: 70, max: 100 },
-    ],
-  },
-  {
-    name: "Malta",
-    shortName: "MLT",
-    color: "oklch(0.70 0.02 250)",
-    bgColor: "oklch(0.15 0.03 250)",
-    borderColor: "oklch(0.70 0.02 250 / 0.4)",
-    score: 178,
-    rank: 1,
-    categories: [
-      { label: "Athletics", score: 50, max: 100 },
-      { label: "Academics", score: 63, max: 100 },
-      { label: "Arts", score: 65, max: 100 },
     ],
   },
 ];
@@ -139,7 +141,7 @@ export default function ScoreboardSection() {
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               {/* Rank badge */}
-              {hall.rank === 1 && (
+              {hall.reigningChampion && (
                 <div
                   className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 px-4 py-1 text-[0.65rem] tracking-[0.2em]"
                   style={{
@@ -182,7 +184,7 @@ export default function ScoreboardSection() {
                     className="text-4xl font-black"
                     style={{ fontFamily: "'Cinzel', serif", color: hall.color, opacity: 0.15 }}
                   >
-                    {hall.rank === 1 ? "I" : hall.rank === 2 ? "II" : "III"}
+                    {hall.reigningChampion ? "I" : hall.rank === 2 ? "II" : "III"}
                   </div>
                 </div>
 

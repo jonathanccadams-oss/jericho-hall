@@ -1,4 +1,4 @@
-/* HeroSection — Full-bleed dark hero with crest, gold display type, and dramatic imagery */
+/* HeroSection — Hero banner with video background and dark green filter overlay */
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
@@ -12,14 +12,31 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url("https://private-us-east-1.manuscdn.com/sessionFile/XuGELq3Rli4UJ25IeT1Tvk/sandbox/ag2R57aqi1ZTllfSafSLCx-img-1_1771993120000_na1fn_amVyaWNoby1oZXJvLWJhbm5lcg.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWHVHRUxxM1JsaTRVSjI1SWVUMVR2ay9zYW5kYm94L2FnMlI1N2FxaTFaVGxsZlNhZlNMQ3gtaW1nLTFfMTc3MTk5MzEyMDAwMF9uYTFmbl9hbVZ5YVdOb2J5MW9aWEp2TFdKaGJtNWxjZy5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Xv9D74l08d-7QFILke-a9OXFVUrRGSv-xuRBfox6kQmW-wdRAQlBKDNUJ1sXU~R7sFU9f2lWFp6J6-vYZcmpnBPKV9~8-o8WarWoCc4pUdspvT07jaw~lZiD8hm8J9cE4AUDrxome5nFLEDh-C6MZJ~x0Dm~SVhJxaEVkJY~eF06cb0ZBPzWSnYEafzW3IICBf-lIig5mOAfMgJvFelMGGsA~d9o4NfAlC1adt7-Mt088706dnJfMfWch2jaz7vx07zcWEeqc~7TmxshDhNkzBH5wbEEk1D5B2eX90o9uKC1nyxkCE-ORX1tsG6HnISuY5BfzoHoBqpTcYLXORh7SQ__")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center top",
-      }}
     >
-      {/* Dark overlay gradient */}
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{
+          filter: "brightness(0.6)",
+        }}
+      >
+        <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/ECjlVZjibPWHuJRp.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark green filter overlay with fade edges */}
       <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.08_0.04_148/0.75)] via-[oklch(0.10_0.04_148/0.6)] to-[oklch(0.12_0.04_148/0.95)]" />
+
+      {/* Radial fade at edges */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse at center, transparent 0%, oklch(0.08 0.04 148 / 0.5) 100%)`,
+        }}
+      />
 
       {/* Content */}
       <div
@@ -79,8 +96,11 @@ export default function HeroSection() {
           {["NSA Cup 2022–23", "NSA Cup 2023–24", "NSA Cup 2024–25"].map((title) => (
             <span
               key={title}
-              className="px-4 py-1.5 border border-[oklch(0.72_0.15_85/0.5)] text-[oklch(0.72_0.15_85)] text-xs tracking-[0.15em]"
-              style={{ fontFamily: "'Cinzel', serif" }}
+              className="px-4 py-2 border border-[oklch(0.72_0.15_85/0.5)] text-[0.65rem] tracking-[0.15em]"
+              style={{
+                fontFamily: "'Cinzel', serif",
+                color: "oklch(0.72 0.15 85)",
+              }}
             >
               {title}
             </span>
@@ -90,24 +110,27 @@ export default function HeroSection() {
         {/* CTA buttons */}
         <div className="flex flex-wrap justify-center gap-4">
           <button
-            className="gold-btn"
             onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
+            className="px-8 py-3 text-sm tracking-[0.15em] transition-all hover:shadow-lg"
+            style={{
+              fontFamily: "'Cinzel', serif",
+              background: "oklch(0.72 0.15 85)",
+              color: "oklch(0.12 0.04 148)",
+            }}
           >
-            Our Story
+            OUR STORY
           </button>
           <button
-            className="ghost-btn"
             onClick={() => document.querySelector("#videos")?.scrollIntoView({ behavior: "smooth" })}
+            className="px-8 py-3 text-sm tracking-[0.15em] border border-[oklch(0.72_0.15_85/0.6)] transition-all hover:bg-[oklch(0.72_0.15_85/0.1)]"
+            style={{
+              fontFamily: "'Cinzel', serif",
+              color: "oklch(0.72 0.15 85)",
+            }}
           >
-            Watch Videos
+            WATCH VIDEOS
           </button>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-        <span className="section-label text-[0.6rem] tracking-[0.3em]">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-[oklch(0.72_0.15_85)] to-transparent" />
       </div>
     </section>
   );
