@@ -42,9 +42,9 @@ export default function Navbar() {
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/gGuAwFrhQMrnGWpz.png"
-            alt="Jericho Hall Eagle"
-            className="w-9 h-9 md:w-11 md:h-11 object-contain group-hover:opacity-80 transition-all duration-300"
+            src="https://pbs.twimg.com/profile_images/1922143271695818752/U8nGWKfL_400x400.jpg"
+            alt="Jericho Hall Crest"
+            className="w-9 h-9 md:w-11 md:h-11 rounded-full object-cover border border-[oklch(0.72_0.15_85/0.4)] group-hover:border-[oklch(0.72_0.15_85/0.8)] transition-all duration-300"
           />
           <div className="flex flex-col leading-none">
             <span

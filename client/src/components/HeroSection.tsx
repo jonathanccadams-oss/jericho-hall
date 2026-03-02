@@ -51,7 +51,8 @@ export default function HeroSection() {
             <img
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/gGuAwFrhQMrnGWpz.png"
               alt="Jericho Hall Eagle"
-              className="relative w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_30px_oklch(0.72_0.15_85/0.4)]"
+              className="relative w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-[0_0_20px_oklch(0.72_0.15_85/0.3)]"
+              style={{ filter: "brightness(1.2) saturate(1.1)", opacity: 0.95 }}
             />
           </div>
         </div>
