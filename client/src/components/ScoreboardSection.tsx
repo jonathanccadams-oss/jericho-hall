@@ -257,7 +257,7 @@ export default function ScoreboardSection() {
           className="text-center mt-8 text-[oklch(0.45_0.04_85)] text-sm italic"
           style={{ fontFamily: "'Crimson Text', serif" }}
         >
-          * Scores are illustrative placeholders. Update with official NSA standings each term.
+          * Scores are updated to latest official standings
         </p>
       </div>
     </section>
