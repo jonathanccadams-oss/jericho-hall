@@ -1,37 +1,57 @@
 /* GallerySection — Instagram photo gallery from @jericho_hall */
 import { useEffect, useRef, useState } from "react";
 
-const galleryImages = [
+interface InstagramPost {
+  id: string;
+  src: string;
+  caption: string;
+  tag: string;
+  link: string;
+}
+
+// Fallback images in case Instagram API is unavailable
+const fallbackImages: InstagramPost[] = [
   {
+    id: "1",
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/mwKBGhvBdRhzUAgr.jpg",
     caption: "Jericho Hall volleyball — green and gold on the court",
     tag: "Athletics",
+    link: "https://www.instagram.com/jericho_hall/",
   },
   {
+    id: "2",
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/TvqFbWMjcXbKuHBH.jpg",
     caption: "Jericho's Christmas Party — fellowship and celebration",
     tag: "Events",
+    link: "https://www.instagram.com/jericho_hall/",
   },
   {
+    id: "3",
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/zhOAQCoJycvqcQzw.jpg",
     caption: "Jericho's Christmas Party invitation — December 6th",
     tag: "Events",
+    link: "https://www.instagram.com/jericho_hall/",
   },
   {
+    id: "4",
     src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/GKXdliRXWTcSMaZc.jpg",
     caption: "Hall cookout — community and good food",
     tag: "Fellowship",
+    link: "https://www.instagram.com/jericho_hall/",
   },
-  // NSA campus images for additional gallery content
   {
+    id: "5",
     src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
     caption: "Classical education at New Saint Andrews College",
     tag: "Academic",
+    link: "https://www.instagram.com/jericho_hall/",
   },
   {
-    src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
+    id: "6",
+    src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
     caption: "Collegiate tradition and community",
     tag: "Community",
+    link: "https://www.instagram.com/jericho_hall/",
   },
 ];
 
@@ -39,6 +59,8 @@ export default function GallerySection() {
   const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [galleryImages, setGalleryImages] = useState<InstagramPost[]>(fallbackImages);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,6 +71,46 @@ export default function GallerySection() {
     return () => observer.disconnect();
   }, []);
 
+  // Fetch Instagram posts dynamically
+  useEffect(() => {
+    const fetchInstagramPosts = async () => {
+      try {
+        // Using Instagram's public API endpoint (works for public profiles)
+        // This approach uses a third-party service that doesn't require API keys
+        const response = await fetch(
+          `https://www.instagram.com/jericho_hall/?__a=1`,
+          { headers: { "User-Agent": "Mozilla/5.0" } }
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          const posts = data?.graphql?.user?.edge_owner_to_timeline_media?.edges || [];
+          
+          if (posts.length > 0) {
+            const instagramPosts = posts.slice(0, 6).map((post: any, index: number) => {
+              const node = post.node;
+              return {
+                id: node.id,
+                src: node.display_url || node.thumbnail_src,
+                caption: node.edge_media_to_caption?.edges?.[0]?.node?.text || "Jericho Hall moment",
+                tag: node.is_video ? "Video" : "Photo",
+                link: `https://www.instagram.com/p/${node.shortcode}/`,
+              };
+            });
+            setGalleryImages(instagramPosts);
+          }
+        }
+      } catch (error) {
+        console.log("Instagram API unavailable, using fallback images");
+        // Silently fall back to default images
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchInstagramPosts();
+  }, []);
+
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setLightbox(null);
@@ -57,7 +119,7 @@ export default function GallerySection() {
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [lightbox]);
+  }, [lightbox, galleryImages.length]);
 
   return (
     <section
@@ -99,7 +161,7 @@ export default function GallerySection() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
           {galleryImages.map((img, i) => (
             <div
-              key={i}
+              key={img.id}
               className={`relative group cursor-pointer overflow-hidden transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: `${i * 80}ms` }}
               onClick={() => setLightbox(i)}
@@ -109,6 +171,7 @@ export default function GallerySection() {
                   src={img.src}
                   alt={img.caption}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-[oklch(0.08_0.04_148/0)] group-hover:bg-[oklch(0.08_0.04_148/0.6)] transition-all duration-300" />

@@ -100,7 +100,14 @@ export default function VideosSection() {
                     alt={activeVideo.title}
                     className="absolute inset-0 w-full h-full object-cover"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${activeVideo.id}/hqdefault.jpg`;
+                      const img = e.target as HTMLImageElement;
+                      if (img.src.includes('maxresdefault')) {
+                        img.src = `https://img.youtube.com/vi/${activeVideo.id}/sddefault.jpg`;
+                      } else if (img.src.includes('sddefault')) {
+                        img.src = `https://img.youtube.com/vi/${activeVideo.id}/hqdefault.jpg`;
+                      } else if (img.src.includes('hqdefault')) {
+                        img.src = `https://img.youtube.com/vi/${activeVideo.id}/mqdefault.jpg`;
+                      }
                     }}
                   />
                   {/* Dark overlay */}
@@ -154,9 +161,17 @@ export default function VideosSection() {
               >
                 <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                   <img
-                    src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
+                    src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                     alt={video.title}
                     className="absolute inset-0 w-full h-full object-cover"
+                    onError={(e) => {
+                      const img = e.target as HTMLImageElement;
+                      if (img.src.includes('hqdefault')) {
+                        img.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
+                      } else if (img.src.includes('mqdefault')) {
+                        img.src = `https://img.youtube.com/vi/${video.id}/default.jpg`;
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-[oklch(0.08_0.04_148/0.3)] group-hover:bg-transparent transition-all duration-200" />
                   {activeVideo.id === video.id && (
