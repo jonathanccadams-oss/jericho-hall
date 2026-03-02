@@ -3,28 +3,28 @@ import { useEffect, useRef, useState } from "react";
 
 const leaders = [
   {
-    name: "Hall Leader",
+    name: "George Owen",
     title: "Head of Jericho Hall",
     role: "Primary Leader",
     description:
-      "The Head of Jericho Hall provides vision and direction for the hall's activities, competitions, and community life throughout the academic year.",
-    initial: "J",
+      "George Owen leads Jericho Hall with vision and direction, stewarding the hall's activities, competitions, and community life throughout the academic year.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/TFtAMlndDYdOuAUm.jpg",
   },
   {
-    name: "Hall Leader",
-    title: "Deputy Hall Leader",
+    name: "Jonathan Adams",
+    title: "Assistant Hall Leader",
     role: "Second in Command",
     description:
-      "The Deputy Hall Leader assists in coordinating hall events, managing inter-hall competitions, and mentoring younger members of the hall.",
-    initial: "J",
+      "Jonathan Adams assists in coordinating hall events, managing inter-hall competitions, and mentoring younger members of the hall community.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/TmwbIOYBaUfDlHSA.jpg",
   },
   {
-    name: "Hall Leader",
-    title: "Hall Secretary",
-    role: "Communications & Records",
+    name: "Laura Cochran",
+    title: "Hall Treasurer",
+    role: "Finance & Administration",
     description:
-      "The Hall Secretary maintains the hall's records, coordinates communications, and ensures the smooth operation of all hall activities and events.",
-    initial: "J",
+      "Laura Cochran manages the hall's finances, records, and administrative operations, ensuring smooth coordination of all hall activities and events.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/EjZEMAAlRBDzLWyV.jpg",
   },
 ];
 
@@ -89,18 +89,17 @@ export default function HallLeadersSection() {
               className={`gold-border-card p-8 text-center transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              {/* Avatar placeholder */}
+              {/* Avatar with real photo */}
               <div className="flex justify-center mb-6">
                 <div
-                  className="w-24 h-24 rounded-full flex items-center justify-center border-2 border-[oklch(0.72_0.15_85/0.4)] bg-[oklch(0.22_0.08_148)]"
+                  className="w-24 h-24 rounded-full flex items-center justify-center border-2 border-[oklch(0.72_0.15_85/0.4)] bg-[oklch(0.22_0.08_148)] overflow-hidden"
                   style={{ boxShadow: "0 0 20px oklch(0.72 0.15 85 / 0.1)" }}
                 >
-                  <span
-                    className="text-3xl gold-text"
-                    style={{ fontFamily: "'Cinzel', serif" }}
-                  >
-                    {leader.initial}
-                  </span>
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
@@ -138,13 +137,6 @@ export default function HallLeadersSection() {
             </div>
           ))}
         </div>
-
-        <p
-          className="text-center mt-8 text-[oklch(0.45_0.04_85)] text-sm italic"
-          style={{ fontFamily: "'Crimson Text', serif" }}
-        >
-          * Update with current hall leaders' names and photos each academic year.
-        </p>
       </div>
     </section>
   );
