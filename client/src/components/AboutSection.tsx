@@ -65,7 +65,7 @@ export default function AboutSection() {
                 Founded in 2021 as one of three halls at New Saint Andrews College, Jericho Hall exists to cultivate self-government, leadership, and excellence among its members. The halls compete throughout the academic year in athletics, arts, and academics — and Jericho has answered the call.
               </p>
               <blockquote className="border-l-2 border-[oklch(0.72_0.15_85/0.6)] pl-5 my-6 italic text-[oklch(0.72_0.15_85)]">
-                "When the faithful endure, the Christian West flourishes."
+                "Be strong and of good courage; do not be afraid, nor be dismayed, for the Lord your God is with you wherever you go." -Joshua 1:9
               </blockquote>
               <p>
                 Three consecutive NSA Cup victories stand as testament to the character forged within Jericho Hall — not merely in competition, but in the daily discipline of classical Christian formation.

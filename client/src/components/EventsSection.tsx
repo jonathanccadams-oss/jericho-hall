@@ -13,58 +13,49 @@ interface Event {
 
 const events: Event[] = [
   {
-    date: "2025-03-07",
-    month: "MAR",
-    day: "07",
+    date: "2025-02-27",
+    month: "Feb",
+    day: "27",
     title: "Hall Declamations — Chalcedon Term",
-    description: "Jericho Hall members compete in the inter-hall declamation competition. Come cheer on your hall!",
+    description: "Jericho Hall competes in the all-school declamation competition. Come cheer on your hall!",
     type: "competition",
-    location: "NSA Main Hall, Moscow, ID",
+    location: "📍 Constantine, North Campus",
   },
   {
-    date: "2025-03-14",
-    month: "MAR",
-    day: "14",
-    title: "Fireside Chat — Spring Edition",
+    date: "2025-03-?",
+    month: "Feb",
+    day: "?",
+    title: "Fireside Chat — Coming soon",
     description: "The latest installment of Jericho's beloved Fireside Chat series. Updates, announcements, and fellowship.",
     type: "social",
     location: "TBD",
   },
   {
-    date: "2025-03-21",
+    date: "2025-03-05",
     month: "MAR",
-    day: "21",
-    title: "Hall Athletics Day",
-    description: "Inter-hall athletic competition. Jericho defends its dominance on the field and court.",
+    day: "5",
+    title: "Basketball Championships",
+    description: "7:00 PM at the Logos Fieldhouse. Jericho against Ashdown. Be there or be 🔳",
     type: "competition",
-    location: "NSA Athletic Facilities",
+    location: "📍 Logos Fieldhouse",
   },
   {
-    date: "2025-04-04",
-    month: "APR",
-    day: "04",
-    title: "Jericho Hall Cookout",
-    description: "Annual spring cookout for all Jericho Hall members and friends. Food, fellowship, and celebration.",
-    type: "social",
-    location: "Moscow, Idaho",
-  },
-  {
-    date: "2025-04-18",
-    month: "APR",
-    day: "18",
-    title: "NSA Halls Theater Arts Competition",
-    description: "Jericho Hall presents scenes from Shakespeare. Three halls compete for artistic honors.",
-    type: "drama",
-    location: "NSA Theater, Moscow, ID",
-  },
-  {
-    date: "2025-05-09",
-    month: "MAY",
-    day: "09",
-    title: "End-of-Year NSA Cup Ceremony",
-    description: "The annual presentation of the NSA Cup. Will Jericho Hall claim its fourth consecutive championship?",
+    date: "2025-03-28",
+    month: "MAR",
+    day: "28",
+    title: "24-hour hall theater competition",
+    description: "Join us for a rapid theater production in a race against Ashdown and Malta Halls!",
     type: "competition",
-    location: "New Saint Andrews College",
+    location: "📍 Nuart Theater, Moscow, ID",
+  },
+  {
+    date: "2025-03-00",
+    month: "MAR",
+    day: "00",
+    title: "Westminster Term: Track and Field",
+    description: "This is where it will all come down to the wire. We're actively recruiting. You're actively training.",
+    type: "competition",
+    location: "📍 Bear Field",
   },
 ];
 
@@ -176,7 +167,7 @@ export default function EventsSection() {
                       className="text-[oklch(0.55_0.04_85)] text-sm"
                       style={{ fontFamily: "'Crimson Text', serif" }}
                     >
-                      📍 {event.location}
+                      {event.location}
                     </p>
                   )}
                 </div>
@@ -189,7 +180,7 @@ export default function EventsSection() {
           className="text-center mt-8 text-[oklch(0.45_0.04_85)] text-sm italic"
           style={{ fontFamily: "'Crimson Text', serif" }}
         >
-          * Events are illustrative placeholders. Update with official NSA calendar each term.
+          * Contact Jonathan Adams for any corrections
         </p>
       </div>
     </section>

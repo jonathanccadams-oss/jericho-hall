@@ -116,7 +116,7 @@ export default function ScoreboardSection() {
       <div className="relative z-10 container">
         {/* Section header */}
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-          <p className="section-label mb-4 tracking-[0.4em]">2024–25 Academic Year</p>
+          <p className="section-label mb-4 tracking-[0.4em]">2025–26 Academic Year</p>
           <div className="gold-rule max-w-xs mx-auto mb-6" />
           <h2
             className="display-heading text-4xl md:text-5xl mb-4"

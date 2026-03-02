@@ -65,7 +65,7 @@ export default function HallLeadersSection() {
         <div
           className={`text-center mb-16 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
         >
-          <p className="section-label mb-4 tracking-[0.4em]">2024–25 Academic Year</p>
+          <p className="section-label mb-4 tracking-[0.4em]">2025–26 Academic Year</p>
           <div className="gold-rule max-w-xs mx-auto mb-6" />
           <h2
             className="display-heading text-4xl md:text-5xl mb-4"
@@ -77,7 +77,7 @@ export default function HallLeadersSection() {
             className="text-[oklch(0.70_0.04_85)] text-lg italic max-w-xl mx-auto"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            The men and women who lead Jericho Hall in competition, fellowship, and the pursuit of excellence.
+            The team that leads Jericho Hall in competition, fellowship, and the pursuit of excellence.
           </p>
         </div>
 
@@ -99,6 +99,9 @@ export default function HallLeadersSection() {
                     src={leader.image}
                     alt={leader.name}
                     className="w-full h-full object-cover"
+                    style={{
+                      objectPosition: i === 0 ? "left center" : i === 1 ? "center center" : "center center",
+                    }}
                   />
                 </div>
               </div>
