@@ -24,7 +24,7 @@ const leaders = [
     role: "Finance & Administration",
     description:
       "Laura Cochran manages the hall's finances, records, and administrative operations, ensuring smooth coordination of all hall activities and events.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/EjZEMAAlRBDzLWyV.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/XBnhMYVIMvdCXyYS.jpg",
   },
 ];
 
