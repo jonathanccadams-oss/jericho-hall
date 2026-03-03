@@ -8,7 +8,7 @@ const leaders = [
     role: "Our Fearless Leader",
     description:
       "Our fearless leader, George Owen guides Jericho Hall with vision and direction, stewarding the hall's activities, competitions, and community life throughout the academic year.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/TFtAMlndDYdOuAUm.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/aiUetAeOPZWHdeFL.png",
   },
   {
     name: "Jonathan Adams",
