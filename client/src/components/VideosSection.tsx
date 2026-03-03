@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const videos = [
-  { id: "zm5XAAUhcCQ", title: "Jericho Hall 🦅", description: "The latest from Jericho Hall — music and spirit." },
+  { id: "zm5XAAUhcCQ", title: "Jericho Hall 🦅", description: "The latest from Jericho Hall — music and spirit.", customThumbnail: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/McHxfACBnOfJfuKp.png" },
   { id: "cCs6T1Eu5TE", title: "Fireside III: Commence Chalcedon", description: "The third Fireside Chat of the Chalcedon Term." },
   { id: "F6ARIr2Ml5E", title: "Chalcedon Declamations", description: "Jericho Hall members deliver powerful declamations." },
   { id: "7Ph3Rt_BiuM", title: "Fireside II: Nicea Notices", description: "Updates and announcements from the Nicea Term." },
@@ -96,12 +96,14 @@ export default function VideosSection() {
                   onClick={() => setPlaying(true)}
                 >
                   <img
-                    src={`https://img.youtube.com/vi/${activeVideo.id}/maxresdefault.jpg`}
+                    src={(activeVideo as any).customThumbnail || `https://img.youtube.com/vi/${activeVideo.id}/maxresdefault.jpg`}
                     alt={activeVideo.title}
                     className="absolute inset-0 w-full h-full object-cover"
                     onError={(e) => {
                       const img = e.target as HTMLImageElement;
-                      if (img.src.includes('maxresdefault')) {
+                      if ((activeVideo as any).customThumbnail && img.src === (activeVideo as any).customThumbnail) {
+                        img.src = `https://img.youtube.com/vi/${activeVideo.id}/maxresdefault.jpg`;
+                      } else if (img.src.includes('maxresdefault')) {
                         img.src = `https://img.youtube.com/vi/${activeVideo.id}/sddefault.jpg`;
                       } else if (img.src.includes('sddefault')) {
                         img.src = `https://img.youtube.com/vi/${activeVideo.id}/hqdefault.jpg`;
