@@ -23,9 +23,9 @@ export default function Home() {
       <AboutSection />
       <ScoreboardSection />
       <HallLeadersSection />
+      <EventsSection />
       <VideosSection />
       <GallerySection />
-      <EventsSection />
       <Footer />
     </div>
   );
