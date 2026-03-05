@@ -27,9 +27,9 @@ const fallbackImages: InstagramPost[] = [
   },
   {
     id: "3",
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/zhOAQCoJycvqcQzw.jpg",
-    caption: "Jericho's Christmas Party invitation — December 6th",
-    tag: "Events",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/thsGyCKZWhirikOF.jpeg",
+    caption: "Jericho Hall basketball — athletic competition and team spirit",
+    tag: "Athletics",
     link: "https://www.instagram.com/jericho_hall/",
   },
   {
