@@ -28,13 +28,13 @@ export default function HeroSection() {
       </video>
 
       {/* Dark green filter overlay with fade edges */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.08_0.04_148/0.75)] via-[oklch(0.10_0.04_148/0.6)] to-[oklch(0.12_0.04_148/0.95)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.08_0.04_148/0.4)] via-[oklch(0.10_0.04_148/0.3)] to-[oklch(0.12_0.04_148/0.5)]" />
 
       {/* Radial fade at edges */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `radial-gradient(ellipse at center, transparent 0%, oklch(0.08 0.04 148 / 0.5) 100%)`,
+          background: `radial-gradient(ellipse at center, transparent 0%, oklch(0.08 0.04 148 / 0.25) 100%)`,
         }}
       />
 
