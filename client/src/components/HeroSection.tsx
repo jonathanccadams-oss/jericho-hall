@@ -13,6 +13,8 @@ export default function HeroSection() {
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Bottom fade gradient overlay */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background pointer-events-none z-20" />
       {/* Video background */}
       <video
         autoPlay
