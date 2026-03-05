@@ -13,13 +13,13 @@ interface Event {
 
 const events: Event[] = [
   {
-    date: "2025-04-17",
-    month: "Apr",
-    day: "17",
-    title: "Hall Declamations — Westminster Term",
-    description: "Jericho Hall competes in the all-school declamation competition. Come cheer on your hall!",
+    date: "2025-03-05",
+    month: "MAR",
+    day: "5",
+    title: "Basketball Championships",
+    description: "7:00 PM at the Logos Fieldhouse. Jericho against Ashdown. Be there or be 🔳",
     type: "competition",
-    location: "📍 Constantine, North Campus",
+    location: "📍 Logos Fieldhouse",
   },
   {
     date: "2025-03-27",
@@ -31,13 +31,13 @@ const events: Event[] = [
     location: "TBD",
   },
   {
-    date: "2025-03-05",
-    month: "MAR",
-    day: "5",
-    title: "Basketball Championships",
-    description: "7:00 PM at the Logos Fieldhouse. Jericho against Ashdown. Be there or be 🔳",
-    type: "competition",
-    location: "📍 Logos Fieldhouse",
+    date: "2025-03-27",
+    month: "Mar",
+    day: "27",
+    title: "NSA Essay Competition",
+    description: "Buckle down for an hour and out-write the other halls. Look out for an upcoming preparatory workshop.",
+    type: "academic",
+    location: "📍 Constantine, North Campus",
   },
   {
     date: "2025-03-28",
@@ -65,6 +65,15 @@ const events: Event[] = [
     description: "Formal event from 4:00 to 6:00 for musical performance and fellowship. Drinks and hors d'oeuvres provided.",
     type: "social",
     location: "📍 1177 Cornwall Rd, Troy, ID 83871",
+  },
+  {
+    date: "2025-04-17",
+    month: "Apr",
+    day: "17",
+    title: "Hall Declamations — Westminster Term",
+    description: "Jericho Hall competes in the all-school declamation competition. Come cheer on your hall!",
+    type: "competition",
+    location: "📍 Constantine, North Campus",
   },
 ];
 
