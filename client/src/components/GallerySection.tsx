@@ -48,9 +48,9 @@ const fallbackImages: InstagramPost[] = [
   },
   {
     id: "6",
-    src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
-    caption: "Collegiate tradition and community",
-    tag: "Community",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/nVyxTFdnHVuGZsLj.jpg",
+    caption: "Jericho Hall cruise — lakeside adventure and community bonding",
+    tag: "Events",
     link: "https://www.instagram.com/jericho_hall/",
   },
 ];
