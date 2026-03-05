@@ -57,6 +57,15 @@ const events: Event[] = [
     type: "competition",
     location: "📍 Bear Field",
   },
+  {
+    date: "2025-04-11",
+    month: "APR",
+    day: "11",
+    title: "Evening of Musical Arts 🎻",
+    description: "Formal event from 4:00 to 6:00 for musical performance and fellowship. Drinks and hors d'oeuvres provided.",
+    type: "social",
+    location: "📍 1177 Cornwall Rd, Troy, ID 83871",
+  },
 ];
 
 const typeColors: Record<Event["type"], { bg: string; text: string; label: string }> = {
