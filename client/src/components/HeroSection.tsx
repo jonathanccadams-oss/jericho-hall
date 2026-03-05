@@ -28,7 +28,7 @@ export default function HeroSection() {
       </video>
 
       {/* Dark green filter overlay with fade edges */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.08_0.04_148/0.4)] via-[oklch(0.10_0.04_148/0.3)] to-[oklch(0.12_0.04_148/0.5)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.08_0.04_148/0.15)] via-[oklch(0.10_0.04_148/0.2)] to-[oklch(0.12_0.04_148/0.7)]" />
 
       {/* Radial fade at edges */}
       <div
