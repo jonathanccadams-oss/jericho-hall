@@ -41,9 +41,9 @@ const fallbackImages: InstagramPost[] = [
   },
   {
     id: "5",
-    src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
-    caption: "Classical education at New Saint Andrews College",
-    tag: "Academic",
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/FUVidKQVoFjnBkng.jpg",
+    caption: "Jericho Hall feast — food, fellowship, and celebration",
+    tag: "Fellowship",
     link: "https://www.instagram.com/jericho_hall/",
   },
   {
