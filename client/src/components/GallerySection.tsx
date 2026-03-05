@@ -153,7 +153,7 @@ export default function GallerySection() {
             className="text-[oklch(0.70_0.04_85)] text-lg italic max-w-xl mx-auto"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Life inside Jericho Hall — athletics, events, fellowship, and the pursuit of excellence.
+            The best Tea Times. The greatest wins. Follow us on Instagram for more.
           </p>
         </div>
 

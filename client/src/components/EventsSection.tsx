@@ -120,7 +120,7 @@ export default function EventsSection() {
             className="text-[oklch(0.70_0.04_85)] text-lg italic max-w-xl mx-auto"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Competitions, Fireside Chats, social gatherings, and more — the full calendar of Jericho Hall life.
+            Competitions, Fireside Chats, social gatherings, and more. Check Populi for more event details.
           </p>
         </div>
 

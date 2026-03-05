@@ -62,7 +62,7 @@ export default function VideosSection() {
             className="text-[oklch(0.70_0.04_85)] text-lg italic max-w-xl mx-auto"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Fireside Chats, declamations, drama productions, and hall life — all on our YouTube channel.
+            Fireside Chats, declamations, drama productions, and hall life. Subscribe to our Youtube channel to see the rest of our content.
           </p>
         </div>
 

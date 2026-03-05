@@ -59,16 +59,22 @@ export default function AboutSection() {
               style={{ fontFamily: "'Crimson Text', serif" }}
             >
               <p>
-                Jericho Hall takes its name from one of the most dramatic victories in sacred history — the Battle of Jericho, recorded in the sixth chapter of the Book of Joshua. God commanded His people to march in faith, and when they shouted, the walls fell.
+                Jericho Hall is named after the battle of Jericho, described in the sixth chapter of the Book of Joshua. God's orders were for all of the mighty men of valor to march around the city of Jericho following His precise commands for six days.
               </p>
               <p>
-                Founded in 2021 as one of three halls at New Saint Andrews College, Jericho Hall exists to cultivate self-government, leadership, and excellence among its members. The halls compete throughout the academic year in athletics, arts, and academics — and Jericho has answered the call.
+                At dawn on the seventh day, the armed men, the trumpet-bearing priests, the Ark of the Covenant, and the rear guard circled the city six times. On the seventh lap, Joshua commanded the people to "Shout, for the Lord has given you the city!"
+              </p>
+              <p>
+                As God had promised, so He did. At the battle of Jericho, God caused the shouts of the Israelites to bring down the walls of Jericho. This victory began Israel's advance, under the leadership of Joshua, into the promised land.
+              </p>
+              <p>
+                Founded in 2021 as one of three halls at New Saint Andrews College, Jericho Hall exists to cultivate self-government, leadership, and excellence among its members. The halls compete throughout the college year in athletics, arts, and academics.
               </p>
               <blockquote className="border-l-2 border-[oklch(0.72_0.15_85/0.6)] pl-5 my-6 italic text-[oklch(0.72_0.15_85)]">
                 "Be strong and of good courage; do not be afraid, nor be dismayed, for the Lord your God is with you wherever you go." -Joshua 1:9
               </blockquote>
               <p>
-                Three consecutive NSA Cup victories stand as testament to the character forged within Jericho Hall — not merely in competition, but in the daily discipline of classical Christian formation.
+                Three consecutive NSA Cup victories stand as testament to the character of Jericho Hall. We plan to cultivate that virtue that will continue to carry us to victory in the future.
               </p>
             </div>
 
