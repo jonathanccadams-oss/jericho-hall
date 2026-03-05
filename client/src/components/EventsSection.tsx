@@ -13,18 +13,18 @@ interface Event {
 
 const events: Event[] = [
   {
-    date: "2025-02-27",
-    month: "Feb",
-    day: "27",
-    title: "Hall Declamations — Chalcedon Term",
+    date: "2025-04-17",
+    month: "Apr",
+    day: "17",
+    title: "Hall Declamations — Westminster Term",
     description: "Jericho Hall competes in the all-school declamation competition. Come cheer on your hall!",
     type: "competition",
     location: "📍 Constantine, North Campus",
   },
   {
-    date: "2025-03-?",
-    month: "Feb",
-    day: "?",
+    date: "2025-03-27",
+    month: "Mar",
+    day: "27",
     title: "Fireside Chat — Coming soon",
     description: "The latest installment of Jericho's beloved Fireside Chat series. Updates, announcements, and fellowship.",
     type: "social",
