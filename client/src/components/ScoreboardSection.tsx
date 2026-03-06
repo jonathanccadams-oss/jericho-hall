@@ -21,21 +21,6 @@ interface HallScore {
 
 const hallData: HallScore[] = [
   {
-    name: "Malta",
-    shortName: "MLT",
-    color: "oklch(0.70 0.02 250)",
-    bgColor: "oklch(0.15 0.03 250)",
-    borderColor: "oklch(0.70 0.02 250 / 0.4)",
-    score: 188,
-    rank: 2,
-    categories: [
-      { label: "Athletics", score: 60, max: 100 },
-      { label: "Academics", score: 63, max: 100 },
-      { label: "Arts", score: 65, max: 100 },
-    ],
-    logo: "https://nsa.edu/wp-content/uploads/2024/01/malta-logo.png",
-  },
-  {
     name: "Jericho",
     shortName: "JER",
     color: "oklch(0.72 0.15 85)",
@@ -51,6 +36,21 @@ const hallData: HallScore[] = [
       { label: "Arts", score: 65, max: 100 },
     ],
     logo: "https://nsa.edu/wp-content/uploads/2024/01/jericho-logo.png",
+  },
+  {
+    name: "Malta",
+    shortName: "MLT",
+    color: "oklch(0.70 0.02 250)",
+    bgColor: "oklch(0.15 0.03 250)",
+    borderColor: "oklch(0.70 0.02 250 / 0.4)",
+    score: 188,
+    rank: 2,
+    categories: [
+      { label: "Athletics", score: 60, max: 100 },
+      { label: "Academics", score: 63, max: 100 },
+      { label: "Arts", score: 65, max: 100 },
+    ],
+    logo: "https://nsa.edu/wp-content/uploads/2024/01/malta-logo.png",
   },
   {
     name: "Ashdown",
