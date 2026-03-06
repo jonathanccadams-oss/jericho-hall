@@ -198,7 +198,7 @@ export default function ScoreboardSection() {
                     className="text-4xl font-black"
                     style={{ fontFamily: "'Cinzel', serif", color: hall.color, opacity: 0.15 }}
                   >
-                    {hall.name === "Malta" ? "I" : hall.name === "Jericho" ? "II" : "III"}
+                    {hall.name === "Jericho" ? "I" : hall.name === "Malta" ? "II" : "III"}
                   </div>
                 </div>
 
