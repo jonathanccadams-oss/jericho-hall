@@ -16,7 +16,7 @@ const leaders = [
     role: "Second in Command",
     description:
       "Jonathan Adams assists in coordinating hall events, managing inter-hall competitions, and mentoring younger members of the hall community.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/vRbuzMiSRhXkJBjd.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/pUfbRyCqpIyNHGtm.jpg",
   },
   {
     name: "Laura Cochran",
