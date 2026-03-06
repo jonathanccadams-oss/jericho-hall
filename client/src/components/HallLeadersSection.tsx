@@ -15,7 +15,7 @@ const leaders = [
     title: "Assistant Hall Leader",
     role: "Second in Command",
     description:
-      "Jonathan Adams assists in coordinating hall events, managing inter-hall competitions, and mentoring younger members of the hall community.",
+      "Jonathan Adams assists in coordinating hall events and inter-hall competitions, and has built rocket parts that have gone to space. Website manager.",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/pUfbRyCqpIyNHGtm.jpg",
   },
   {
