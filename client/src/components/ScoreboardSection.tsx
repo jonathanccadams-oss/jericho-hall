@@ -44,7 +44,7 @@ const hallData: HallScore[] = [
     bgColor: "oklch(0.15 0.03 250)",
     borderColor: "oklch(0.70 0.02 250 / 0.4)",
     score: 195,
-    rank: 2,
+    rank: 3,
     categories: [
       { label: "Athletics", score: 60, max: 100 },
       { label: "Academics", score: 63, max: 100 },
@@ -59,7 +59,7 @@ const hallData: HallScore[] = [
     bgColor: "oklch(0.16 0.04 25)",
     borderColor: "oklch(0.65 0.18 25 / 0.4)",
     score: 202,
-    rank: 3,
+    rank: 2,
     categories: [
       { label: "Athletics", score: 75, max: 100 },
       { label: "Academics", score: 29, max: 100 },
