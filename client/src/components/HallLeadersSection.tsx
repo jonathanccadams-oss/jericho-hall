@@ -11,7 +11,7 @@ const leadersByYear = [
         role: "Our Fearless Leader",
         description:
           "Jack Landis leads Jericho Hall with vision and direction, stewarding the hall's activities, competitions, and community life throughout the academic year.",
-        image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/vAiitziGdaGTvYkB.jpeg",
+        image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/mOXDvnsZGhcEKhVA.jpeg",
       },
       {
         name: "Bengt Anderson",
