@@ -19,7 +19,7 @@ const leadersByYear = [
         role: "Second in Command",
         description:
           "Bengt Anderson assists in coordinating hall events and inter-hall competitions, and mentors younger members of the hall community.",
-        image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/pUfbRyCqpIyNHGtm.jpg",
+        image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663381600658/NWYlvkfaqpbzBYdr.webp",
       },
       {
         name: "Lola Griffith",
