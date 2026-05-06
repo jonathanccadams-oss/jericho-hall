@@ -156,7 +156,7 @@ export default function ScoreboardSection() {
                     color: "oklch(0.12 0.04 148)",
                   }}
                 >
-                  ◆ REIGNING CHAMPION ◆
+                  ◆ 2025-26 Champion ◆
                 </div>
               )}
 
