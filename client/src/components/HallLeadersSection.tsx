@@ -1,4 +1,4 @@
-/* HallLeadersSection — Carousel of Hall Leaders by year with navigation */
+/* HallLeadersSection — Carousel of Hall Leaders by year with slide animations */
 import { useEffect, useRef, useState } from "react";
 
 const leadersByYear = [
@@ -66,6 +66,7 @@ export default function HallLeadersSection() {
   const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState<"left" | "right">("right");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -77,10 +78,12 @@ export default function HallLeadersSection() {
   }, []);
 
   const goToPrevious = () => {
+    setSlideDirection("left");
     setCurrentIndex((prev) => (prev === 0 ? leadersByYear.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
+    setSlideDirection("right");
     setCurrentIndex((prev) => (prev === leadersByYear.length - 1 ? 0 : prev + 1));
   };
 
@@ -95,6 +98,35 @@ export default function HallLeadersSection() {
         background: "oklch(0.15 0.06 148)",
       }}
     >
+      <style>{`
+        @keyframes slideInFromRight {
+          from {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes slideInFromLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        .carousel-slide-enter {
+          animation: slideInFromRight 0.6s ease-out forwards;
+        }
+        .carousel-slide-enter-left {
+          animation: slideInFromLeft 0.6s ease-out forwards;
+        }
+      `}</style>
+
       {/* Subtle background texture */}
       <div
         className="absolute inset-0 opacity-20"
@@ -129,7 +161,7 @@ export default function HallLeadersSection() {
         {/* Year label */}
         <div className="text-center mb-8">
           <p
-            className="text-2xl font-bold gold-text"
+            className="text-2xl font-bold gold-text transition-all duration-300"
             style={{ fontFamily: "'Cinzel', serif" }}
           >
             {currentYear.year}
@@ -155,7 +187,7 @@ export default function HallLeadersSection() {
           </button>
 
           {/* Leader cards */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto flex-1">
+          <div className={`grid md:grid-cols-3 gap-8 max-w-5xl mx-auto flex-1 ${slideDirection === "right" ? "carousel-slide-enter" : "carousel-slide-enter-left"}`}>
             {currentYear.leaders.map((leader, i) => (
               <div
                 key={i}
@@ -236,7 +268,10 @@ export default function HallLeadersSection() {
           {leadersByYear.map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrentIndex(i)}
+              onClick={() => {
+                setSlideDirection(i > currentIndex ? "right" : "left");
+                setCurrentIndex(i);
+              }}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 i === currentIndex ? "bg-[oklch(0.72_0.15_85)] w-8" : "bg-[oklch(0.72_0.15_85/0.3)]"
               }`}
