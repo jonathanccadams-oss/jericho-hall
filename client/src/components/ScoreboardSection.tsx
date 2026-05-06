@@ -29,13 +29,30 @@ const hallData: HallScore[] = [
     score: 325,
     rank: 1,
     isJericho: false,
-    reigningChampion: false,
+    reigningChampion: true,
     categories: [
       { label: "Athletics", score: 155, max: 100 },
       { label: "Academics", score: 72, max: 100 },
       { label: "Arts", score: 98, max: 100 },
     ],
     logo: "https://nsa.edu/wp-content/uploads/2024/01/ashdown-logo.png",
+  },
+  {
+    name: "Jericho",
+    shortName: "JER",
+    color: "oklch(0.72 0.15 85)",
+    bgColor: "oklch(0.18 0.07 148)",
+    borderColor: "oklch(0.72 0.15 85 / 0.6)",
+    score: 321,
+    rank: 2,
+    isJericho: true,
+    reigningChampion: false,
+    categories: [
+      { label: "Athletics", score: 140, max: 100 },
+      { label: "Academics", score: 101, max: 100 },
+      { label: "Arts", score: 80, max: 100 },
+    ],
+    logo: "https://nsa.edu/wp-content/uploads/2024/01/jericho-logo.png",
   },
   {
     name: "Malta",
@@ -51,23 +68,6 @@ const hallData: HallScore[] = [
       { label: "Arts", score: 92, max: 100 },
     ],
     logo: "https://nsa.edu/wp-content/uploads/2024/01/malta-logo.png",
-  },
-  {
-    name: "Jericho",
-    shortName: "JER",
-    color: "oklch(0.72 0.15 85)",
-    bgColor: "oklch(0.18 0.07 148)",
-    borderColor: "oklch(0.72 0.15 85 / 0.6)",
-    score: 321,
-    rank: 2,
-    isJericho: true,
-    reigningChampion: true,
-    categories: [
-      { label: "Athletics", score: 140, max: 100 },
-      { label: "Academics", score: 101, max: 100 },
-      { label: "Arts", score: 80, max: 100 },
-    ],
-    logo: "https://nsa.edu/wp-content/uploads/2024/01/jericho-logo.png",
   },
 ];
 
@@ -200,7 +200,7 @@ export default function ScoreboardSection() {
                     className="text-4xl font-black"
                     style={{ fontFamily: "'Cinzel', serif", color: hall.color, opacity: 0.15 }}
                   >
-                    {hall.name === "Jericho" ? "I" : hall.name === "Malta" ? "II" : "III"}
+                    {hall.name === "Ashdown" ? "I" : hall.name === "Jericho" ? "II" : "III"}
                   </div>
                 </div>
 
