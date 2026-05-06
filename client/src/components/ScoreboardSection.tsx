@@ -149,7 +149,7 @@ export default function ScoreboardSection() {
               {/* Rank badge */}
               {hall.reigningChampion && (
                 <div
-                  className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 px-4 py-1 text-[0.65rem] tracking-[0.2em]"
+                  className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 px-6 py-1 text-[0.65rem] tracking-[0.2em] whitespace-nowrap"
                   style={{
                     fontFamily: "'Cinzel', serif",
                     background: "oklch(0.72 0.15 85)",
